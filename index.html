@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React:00-01-02-03</title>
+    </head>
+    
+    <style>
+        thead:nth-child(odd) {background-color: mediumorchid;}
+        tbody:nth-child(even) {background-color: mediumpurple;}
+    </style>
+
+    <body>
+        <div id = "app">
+
+        </div>
+        <script src="libs/react.js"></script>
+        <script src="libs/react-dom.js"></script>
+        <script src="libs/babel.js"></script>
+
+        <script type="text/babel">
+            class TabeladeTiragosto extends React.Component{
+                render(){
+                    <div>
+                        <table id="tabela" border="1">
+                            <thead>
+                                <tr><th>Nome</th><th>Marca</th></tr>
+                            </thead>
+
+                            <tbody>
+                                <tr><td>Carne</td><td>Frigorifico Fulano de tal</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                }
+            }
+
+            class TabeladeBebidas extends React.Component{
+                render(){
+                    return(
+                        <div align = "center">
+                            <h1> {this.props.titulo} </h1>
+
+                            <table id="tabela" border="5" align="center">
+                                <thead>
+                                    <tr><th>Nome</th><th>Marca</th></tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr align="center"><td>Havana</td><td>Engenho Anísio Santiago</td></tr>
+                                    <tr align="center"><td>Skol</td><td>Carlsberg</td></tr>
+                                    <tr align="center"><td>Cachaça 51</td><td>Companhia Müller</td></tr>
+                                    <tr align="center"><td>Lobo Branco</td><td>Vinhedo Toussaint</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    )
+                }
+            }
+
+            ReactDOM.render(
+                <TabeladeBebidas titulo = "Tabela de Bebidas"/>,
+                document.getElementById("app")
+            )
+        </script>
+
+
+<!--        <script type="text/babel">
+
+            function Cabecalho(){
+                return(React.createElement('h1', null, <TabeladeBebidas/>))
+            }
+
+            function TabeladeBebidas(){
+                return(
+                    <table id="tabela" border="5" align="center">
+                        <thead>
+                            <tr><th>Nome</th><th>Marca</th></tr>
+                        </thead>
+
+                        <tbody>
+                            <tr align="center"><td>Havana</td><td>Engenho Anísio Santiago</td></tr>
+                            <tr align="center"><td>Skol</td><td>Carlsberg</td></tr>
+                            <tr align="center"><td>Cachaça 51</td><td>Companhia Müller</td></tr>
+                            <tr align="center"><td>Lobo Branco</td><td>Vinhedo Toussaint</td></tr>
+                        </tbody>
+                    </table>
+                )
+            }
+
+            ReactDOM.render(
+                <Cabecalho/>,
+                document.getElementById("app")
+            )
+        </script> -->
+
+        
+
+   <!-- <script>
+            ReactDOM.render(
+                React.createElement(
+                    'table', {id: 'tabela', border: '5'},
+                    React.createElement(
+                        'tr', 'null',
+                        React.createElement('th', null, 'Nome'),
+                        React.createElement('th', null, 'Cidade'),
+                    ),
+                    React.createElement(
+                        'tr', 'null',
+                        React.createElement('th', null, 'Fulano'),
+                        React.createElement('th', null, 'Caicó'),
+                    ),
+                ),
+                
+                document.getElementById('app')
+            );
+        </script> -->
+    </body>
+</html>
