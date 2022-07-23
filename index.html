@@ -5,7 +5,22 @@
     </head>
     
     <style>
-        thead:nth-child(odd) {background-color: mediumorchid;}
+        td:hover {background-color: rgb(35, 215, 243);}
+        th{
+            color: orange;
+            padding: 20px;
+            border: 3px solid green;
+            text-transform: uppercase; text-align: center;
+            font-size: large;
+        }
+        td{
+            color: black;
+            padding: 20px;
+            text-align: center;
+            border: 3px solid green;
+            font-size: large;
+        }
+        thead:nth-child(odd) {background-color: rgb(88, 0, 132);}
         tbody:nth-child(even) {background-color: mediumpurple;}
     </style>
 
@@ -42,15 +57,29 @@
 
                             <table id="tabela" border="5" align="center">
                                 <thead>
-                                    <tr><th>Nome</th><th>Marca</th></tr>
+                                    <tr><th>Nome</th><th>Marca</th><th>Tipo</th></tr>
                                 </thead>
 
                                 <tbody>
-                                    <tr align="center"><td>Havana</td><td>Engenho Anísio Santiago</td></tr>
-                                    <tr align="center"><td>Skol</td><td>Carlsberg</td></tr>
-                                    <tr align="center"><td>Cachaça 51</td><td>Companhia Müller</td></tr>
-                                    <tr align="center"><td>Lobo Branco</td><td>Vinhedo Toussaint</td></tr>
+                                    <tr align="center"><td>Havana</td><td>Engenho Anísio Santiago</td><td>Cachaça</td></tr>
+                                    <tr align="center"><td>Skol</td><td>Carlsberg</td><td>Cerveja</td></tr>
+                                    <tr align="center"><td>Cachaça 51</td><td>Companhia Müller</td><td>Cachaça</td></tr>
+                                    <tr align="center"><td>Lobo Branco</td><td>Vinhedo Toussaint</td><td>Vinho</td></tr>
                                 </tbody>
+                            </table>
+                        </div>
+                    )
+                }
+            }
+
+            class titulo{
+                render(){
+                    return(
+                        <div align="center">
+                            <table id="titulo" border="5">
+                                <head>
+                                    <tr><th>Tabela de Bebidas</th></tr>
+                                </head>
                             </table>
                         </div>
                     )
